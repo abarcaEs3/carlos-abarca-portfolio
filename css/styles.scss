@@ -1331,30 +1331,33 @@ button {
 .contact__email {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-
+  gap: 12px;
   width: fit-content;
-
-  margin-top: 36px;
-
+  margin-top: 40px;
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-solid);
   color: var(--color-text-primary);
-
   font-family: var(--font-mono);
   font-size: 14px;
+  font-weight: 500;
+  transition: all var(--transition-fast);
 
-  transition:
-    color 180ms ease,
-    gap 180ms ease;
-}
+  svg {
+    color: var(--color-accent);
+    transition: transform var(--transition-fast);
+  }
 
-.contact__email span {
-  color: var(--color-accent);
-  font-size: 18px;
-}
-
-.contact__email:hover {
-  color: var(--color-accent);
-  gap: 14px;
+  &:hover {
+    border-color: var(--color-border-hover);
+    background: var(--color-surface-elevated);
+    box-shadow: var(--shadow-glow);
+    
+    svg {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .contact__links {
