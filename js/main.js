@@ -12,8 +12,10 @@ const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "light") {
   document.body.classList.add("light-theme");
   themeToggle.textContent = "☾";
+  themeToggle.setAttribute("aria-label", "Switch to dark theme");
 } else {
   themeToggle.textContent = "☼";
+  themeToggle.setAttribute("aria-label", "Switch to light theme");
 }
 
 themeToggle.addEventListener("click", () => {
@@ -22,6 +24,11 @@ themeToggle.addEventListener("click", () => {
   const isLight = document.body.classList.contains("light-theme");
 
   themeToggle.textContent = isLight ? "☾" : "☼";
+
+  themeToggle.setAttribute(
+    "aria-label",
+    isLight ? "Switch to dark theme" : "Switch to light theme"
+  );
 
   localStorage.setItem("theme", isLight ? "light" : "dark");
 });
@@ -60,6 +67,7 @@ menuToggle.addEventListener("click", () => {
 navbarLinks.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     navbarLinks.classList.remove("is-open");
+    menuToggle.classList.remove("is-active");
     menuToggle.setAttribute("aria-expanded", "false");
   });
 });

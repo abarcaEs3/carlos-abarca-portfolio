@@ -75,13 +75,13 @@
         Navigation
     ============================================ -->
     <header class="site-header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
 
             <a href="#home" class="navbar__logo">
                 Carlos Abarca
             </a>
 
-            <div class="navbar__links">
+            <div class="navbar__links" id="main-navigation">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
@@ -95,7 +95,12 @@
                     ☼
                 </button>
 
-                <button class="menu-toggle" type="button" aria-label="Open navigation menu">
+                <button 
+                    class="menu-toggle" 
+                    type="button" 
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="main-navigation">
                     ☰
                 </button>
             </div>
@@ -136,16 +141,35 @@
                         <span>→</span>
                     </a>
 
-                    <a href="assets/cv/Carlos-Abarca-CV.pdf" class="button button--secondary" target="_blank">
+                    <a 
+                        href="assets/cv/Carlos-Abarca-CV.pdf" 
+                        class="button button--secondary" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Download CV
                     </a>
                 </div>
 
                 <div class="hero__socials">
-                    <a href="https://github.com/abarcaEs3" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <a 
+                        href="https://github.com/abarcaEs3" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        aria-label="GitHub Profile"
+                        aria-hidden="true"
+                        focusable="false"
+                    >
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                     </a>
-                    <a href="https://linkedin.com/in/carlos-abarca-espinoza" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <a 
+                        href="https://linkedin.com/in/carlos-abarca-espinoza" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        aria-label="LinkedIn Profile"
+                        aria-hidden="true"
+                        focusable="false"
+                    >
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                     </a>
                 </div>
@@ -154,7 +178,7 @@
 
             <!-- Abstract visual -->
 
-            <div class="hero__visual" arial-hidden="true">
+            <div class="hero__visual" aria-hidden="true">
 
                 <div class="hero__glow"></div>
 
@@ -203,7 +227,7 @@
 
                     <div class="about__intro">
 
-                        <p class="about_lead">
+                        <p class="about__lead">
                             I'm a software developer from Costa Rica
                             who enjoys building web applications,
                             solving problems, and continuously learning new technologies.
@@ -304,7 +328,7 @@
                             <div class="journey__content">
 
                                 <h3>
-                                    Building more complex solution
+                                    Building more complex solutions
                                 </h3>
 
                                 <p>
@@ -522,9 +546,9 @@
         <section id="projects" class="projects section">
             <div class="section-container">
 
-                <div class="sections-heading reveal">
+                <div class="section-heading reveal">
                     <p class="section-label">PROJECTS</p>
-                    <h2>A few things I've build.</h2>
+                    <h2>A few things I've built.</h2>
                 </div>
 
                 <div class="projects__grid reveal">
@@ -534,7 +558,7 @@
 
                         <div class="project__visual">
                             <div class="project__visual-content">
-                                <span class="project__visual-content">
+                                <span class="project__visual-label">
                                     FEATURED PROJECT
                                 </span>
 
@@ -716,7 +740,7 @@
                         <div class="education__timeline">
 
                             <article class="education__item">
-                                <div class="education_year">
+                                <div class="education__year">
                                     2024
                                 </div>
 
@@ -730,7 +754,7 @@
                             </article>
 
                             <article class="education__item">
-                                <div class="education_year">
+                                <div class="education__year">
                                     2025
                                 </div>
 
@@ -744,7 +768,7 @@
                             </article>
 
                             <article class="education__item">
-                                <div class="education_year">
+                                <div class="education__year">
                                     In progress
                                 </div>
 
@@ -758,7 +782,7 @@
                             </article>
 
                             <article class="education__item">
-                                <div class="education_year">
+                                <div class="education__year">
                                     In progress
                                 </div>
 

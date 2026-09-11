@@ -39,11 +39,11 @@ html {
 }
 
 body {
+  min-height: 100vh;
   background: var(--color-background);
   color: var(--color-text-primary);
   font-family: var(--font-primary);
   line-height: 1.6;
-  min-height: 100vh;
   transition: background-color var(--transition-theme), color var(--transition-theme);
 }
 
@@ -171,8 +171,8 @@ button {
 
 .hero__content {
   position: relative;
-  margin: 50px;
   z-index: 2;
+  padding: 0 20px;
 }
 
 .hero__eyebrow {
@@ -531,7 +531,7 @@ button {
   border: 1px solid var(--color-border);
   border-radius: 12px;
   background: var(--color-surface);
-  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .experience__highlight:hover {
@@ -579,7 +579,7 @@ button {
   background: var(--color-surface);
   font-family: var(--font-mono);
   font-size: 12px;
-  transition: color 180ms ease, border-color 180ms ease;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .experience__technologies span:hover {
@@ -610,7 +610,7 @@ button {
   border: 1px solid var(--color-border);
   border-radius: 12px;
   background: var(--color-surface);
-  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .skills__group:hover {
@@ -653,7 +653,7 @@ button {
   background: var(--color-background);
   font-family: var(--font-mono);
   font-size: 12px;
-  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .skills__list span:hover {
@@ -678,7 +678,7 @@ button {
   border: 1px solid var(--color-border);
   border-radius: 12px;
   background: var(--color-surface);
-  transition: transform 250ms ease, border-color 250ms ease, background-color 250ms ease;
+  transition: transform var(--transition-normal), border-color var(--transition-normal), background-color var(--transition-normal);
 }
 
 .project:hover {
@@ -833,17 +833,12 @@ button {
   color: var(--color-text-primary);
   font-size: 14px;
   font-weight: 500;
-  transition: color 180ms ease, gap 180ms ease;
+  transition: color var(--transition-fast), gap var(--transition-fast);
 }
 
 .project__links a:hover {
   color: var(--color-accent);
   gap: 12px;
-}
-
-.project__links span {
-  color: var(--color-accent);
-  font-size: 16px;
 }
 
 .project:not(.project--featured) {
@@ -1005,23 +1000,30 @@ button {
 .contact__email {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   width: fit-content;
-  margin-top: 36px;
+  margin-top: 40px;
+  padding: 16px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
   color: var(--color-text-primary);
   font-family: var(--font-mono);
   font-size: 14px;
-  transition: color 180ms ease, gap 180ms ease;
+  font-weight: 500;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
 }
-
-.contact__email span {
+.contact__email svg {
   color: var(--color-accent);
-  font-size: 18px;
+  transition: transform var(--transition-fast);
 }
-
 .contact__email:hover {
-  color: var(--color-accent);
-  gap: 14px;
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  background: var(--color-surface-elevated);
+}
+.contact__email:hover svg {
+  transform: scale(1.1);
 }
 
 .contact__links {
@@ -1041,7 +1043,7 @@ button {
   gap: 16px;
   padding: 24px 0;
   border-bottom: 1px solid var(--color-border);
-  transition: color 180ms ease, padding 180ms ease;
+  transition: color var(--transition-fast), padding var(--transition-fast);
 }
 
 .contact__link:first-child {
@@ -1059,16 +1061,16 @@ button {
 }
 
 .contact__link-value {
+  overflow: hidden;
   color: var(--color-text-secondary);
   font-size: 14px;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .contact__link-arrow {
   color: var(--color-text-muted);
   font-size: 18px;
-  transition: color 180ms ease, transform 180ms ease;
+  transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
 .contact__link:hover .contact__link-arrow {
@@ -1077,8 +1079,8 @@ button {
 }
 
 .site-footer {
-  border-top: 1px solid var(--color-border);
   padding-block: 64px 32px;
+  border-top: 1px solid var(--color-border);
 }
 
 .site-footer__main {
@@ -1099,7 +1101,7 @@ button {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.02em;
-  transition: color 180ms ease;
+  transition: color var(--transition-fast);
 }
 
 .site-footer__logo:hover {
@@ -1122,7 +1124,7 @@ button {
 .site-footer__socials a {
   color: var(--color-text-secondary);
   font-size: 13px;
-  transition: color 180ms ease, transform 180ms ease;
+  transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
 .site-footer__nav a:hover,
@@ -1147,11 +1149,6 @@ button {
   font-size: 12px;
 }
 
-.site-footer__built {
-  font-family: var(--font-mono);
-  font-size: 11px;
-}
-
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -1172,9 +1169,24 @@ html.js .reveal.is-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   html.js .reveal {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+  .hero__orb {
+    animation: none;
+  }
+  .button,
+  .project,
+  .experience__highlight,
+  .skills__group,
+  .contact__email,
+  .contact__link,
+  .project__links a {
     transition: none;
   }
 }
@@ -1306,6 +1318,11 @@ html.js .reveal.is-visible {
     width: min(100% - 32px, var(--container-width));
     height: 72px;
   }
+  .navbar__links {
+    top: 72px;
+    left: 16px;
+    right: 16px;
+  }
   .hero {
     width: min(100% - 32px, var(--container-width));
   }
@@ -1362,8 +1379,8 @@ html.js .reveal.is-visible {
     padding: 24px;
   }
   .skills__intro {
-    font-size: 15px;
     margin-bottom: 40px;
+    font-size: 15px;
   }
   .project__visual {
     min-height: 240px;
@@ -1395,6 +1412,13 @@ html.js .reveal.is-visible {
   }
   .contact__description {
     font-size: 15px;
+  }
+  .contact__email {
+    width: 100%;
+    justify-content: center;
+    padding-inline: 16px;
+    font-size: 12px;
+    text-align: center;
   }
   .contact__links {
     padding: 24px;
